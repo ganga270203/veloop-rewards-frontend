@@ -1,0 +1,27 @@
+.page { min-height:100vh; background:#f7f7fb; color:#171927; }
+.header { display:flex; justify-content:space-between; padding:14px 20px; border-bottom:1px solid #e8e8ee; background:#fff; }
+.back { color:#5f6373; text-decoration:none; font-weight:800; font-size:13px; }
+.balance { display:flex; align-items:center; gap:7px; padding:7px 11px; border-radius:999px; background:#fff0c8; color:#795815; font-size:12px; font-weight:900; }
+.shell { width:min(1050px,calc(100% - 32px)); margin:0 auto; padding:50px 0 80px; }
+.kicker { color:#9a721d; font-size:11px; font-weight:900; letter-spacing:1.5px; }
+.shell h1 { margin:8px 0; font-size:clamp(35px,6vw,55px); letter-spacing:-2px; }
+.shell > p { color:#747889; }
+.grid { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:30px; }
+.card { padding:20px; border:1px solid #e6e6ed; border-radius:18px; background:#fff; box-shadow:0 12px 35px rgba(31,35,60,.06); }
+.icon { display:grid; place-items:center; width:44px; height:44px; border-radius:13px; background:#fff1cb; color:#916d20; }
+.card h2 { margin:15px 0 6px; font-size:18px; }
+.card p { min-height:42px; color:#777b8c; font-size:12px; }
+.card button { width:100%; padding:10px; border:0; border-radius:10px; background:#1b1d2c; color:#fff; font-weight:800; font-size:12px; }
+.card button:disabled { opacity:.35; cursor:not-allowed; }
+.status { display:flex; gap:8px; align-items:center; margin-top:20px; padding:12px 14px; border-radius:12px; background:#edf8f0; color:#287145; font-size:13px; }
+.overlay { position:fixed; inset:0; display:grid; place-items:center; padding:18px; background:rgba(18,20,33,.45); backdrop-filter:blur(7px); z-index:30; }
+.modal { position:relative; width:min(430px,100%); padding:28px; border-radius:22px; background:#fff; box-shadow:0 30px 90px rgba(0,0,0,.2); }
+.close { position:absolute; top:13px; right:13px; border:0; background:transparent; color:#777; }
+.modal h2 { margin:14px 0 8px; }
+.modal p { color:#707485; font-size:13px; }
+.modalActions { display:flex; gap:9px; margin-top:20px; }
+.cancel,.confirm { flex:1; padding:12px; border:0; border-radius:11px; font-weight:800; }
+.cancel { background:#ececf1; }
+.confirm { background:#1b1d2c; color:#fff; }
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr 1fr}.shell{padding-top:35px}}

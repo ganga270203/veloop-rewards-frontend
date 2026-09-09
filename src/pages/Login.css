@@ -1,0 +1,317 @@
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.loginPage {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(circle at top left, rgba(255, 212, 59, 0.25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(255, 174, 0, 0.20), transparent 35%),
+    linear-gradient(135deg, #111827, #1f2937, #374151);
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.loginCard {
+  width: 420px;
+  max-width: 100%;
+  padding: 42px 40px;
+
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.15);
+
+  text-align: center;
+  box-sizing: border-box;
+
+  animation: loginCardAnimation 0.6s ease;
+}
+
+
+/* Card Animation */
+
+@keyframes loginCardAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.loginLogo {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffd43b, #ffae00);
+  border-radius: 50%;
+  font-size: 42px;
+  box-shadow:0 10px 25px rgba(245, 158, 11, 0.35);
+  animation: logoAnimation 1s ease;
+}
+
+
+@keyframes logoAnimation {
+  0% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.loginCard h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #111827;
+}
+
+
+.loginSubtitle {
+  margin: 10px 0 30px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+}
+
+
+.loginForm label {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.loginForm input {
+  width: 100%;
+  padding: 14px 15px;
+  box-sizing: border-box;
+  border: 2px solid #e5e7eb;
+  border-radius: 11px;
+  outline: none;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 15px; 
+  transition: all 0.25s ease;
+}
+
+
+.loginForm input::placeholder {
+  color: #9ca3af;
+}
+
+
+.loginForm input:hover {
+  border-color: #d1d5db;
+}
+
+
+.loginForm input:focus {
+  background: white;
+
+  border-color: #f59e0b;
+
+  box-shadow:
+    0 0 0 4px rgba(245, 158, 11, 0.12);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.loginForm button {
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #ffd43b,
+    #ffae00
+  );
+
+  color: #111827;
+
+  font-size: 16px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(245, 158, 11, 0.25);
+
+  transition: all 0.25s ease;
+}
+
+
+.loginForm button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(245, 158, 11, 0.35);
+}
+
+
+.loginForm button:active {
+  transform: translateY(0);
+}
+
+
+.loginForm button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.loginError {
+  margin-top: 15px;
+
+  padding: 12px;
+
+  border-radius: 9px;
+
+  background: #fee2e2;
+
+  border: 1px solid #fecaca;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* =========================
+   REGISTER LINK
+========================= */
+
+.registerLink {
+  margin-top: 25px;
+  margin-left:30px;
+  color: #6b7280;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.registerLink a {
+  color: #f59e0b;
+  font-weight: 800;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+
+.registerLink a:hover {
+  color: #d97706;
+  text-decoration: underline;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .loginPage {
+    padding: 20px 15px;
+  }
+
+  .loginCard {
+    padding: 32px 22px;
+
+    border-radius: 20px;
+  }
+
+  .loginLogo {
+    width: 72px;
+    height: 72px;
+
+    font-size: 36px;
+  }
+
+  .loginCard h1 {
+    font-size: 23px;
+  }
+
+  .loginSubtitle {
+    margin-bottom: 22px;
+  }
+}
